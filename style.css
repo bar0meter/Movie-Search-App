@@ -1,0 +1,146 @@
+body {
+  background-color: black;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 15% auto;
+  width: 800px;
+  height: 80vh;
+  background-color: rgb(37, 36, 36);
+  margin: 50px auto;
+}
+
+.header {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: rgb(172, 170, 170);
+  position: relative;
+}
+
+.search-box {
+  position: absolute;
+  top: 19.7%;
+  left: 25%;
+  padding: 0;
+  height: 45px;
+}
+
+#search-txt {
+  border-width: 0;
+  border-radius: 2px;
+  height: 100%;
+  width: 300px;
+  padding: 10px 10px 10px 20px;
+  font-size: 18px;
+  font-family: 'Operator Mono';
+}
+
+#search-btn {
+  height: 100%;
+  border-radius: 2px;
+  padding: 10px;
+  width: 100px;
+  background-color: #167af6;
+  border-width: 0;
+  color: white;
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 35% auto;
+  font-family: 'Dank Mono';
+  color: white;
+  overflow: auto;
+}
+
+.movieName {
+  border-width: 0 1px 0 0;
+  border-color: rgb(172, 170, 170);
+  border-style: solid;
+  padding: 20px;
+  overflow: auto;
+}
+
+.movieItem {
+  display: grid;
+  grid-template-columns: 80% auto;
+  border: 1px solid rgb(172, 170, 170);
+  min-height: 60px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background: white;
+  font-size: 18px;
+  color: black;
+}
+
+.movieTitle {
+  text-align: center;
+  padding: 20px;
+  word-wrap: break-word;
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.movieItem:hover {
+  background: rgb(228, 222, 222);
+}
+
+.moreDetails-btn {
+  display: none;
+  margin: auto;
+  border: none;
+}
+
+.movieItem:hover .moreDetails-btn {
+  display: block;
+  cursor: pointer;
+}
+
+.movieDetails {
+  display: grid;
+  padding: 10px;
+  grid-template-areas:
+    'poster stats'
+    'summary summary';
+  grid-template-rows: 55% auto;
+  grid-template-columns: 30% auto;
+  background: rgb(223, 155, 91);
+  overflow: auto;
+}
+
+.moviePoster {
+  grid-area: poster;
+  border: none;
+}
+
+.moviePoster img {
+  height: 200px;
+}
+
+.movieStats {
+  grid-area: stats;
+  display: flex;
+  flex-direction: column;
+}
+
+.movieStats div {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.titleMovie {
+  font-size: 25px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: rgb(204, 71, 71);
+}
+
+.movieSummary {
+  grid-area: summary;
+  border-radius: 10px;
+  color: rgb(236, 223, 223);
+  font-size: 18px;
+}
